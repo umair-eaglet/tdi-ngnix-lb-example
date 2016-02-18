@@ -20,9 +20,9 @@ Quick Commands
 
  Chef recipes are written using Test Driven approach
  2. In order to run unit test for each recipe, run following command
-    ⋅⋅1. chef exec rspec .\spec\unit\recipes\appserver_spec.rb           //Run ChefSpec unit tests for appserver recipe
-    ..2. chef exec rspec .\spec\unit\recipes\loadbalancer_spec.rb        //Run ChefSpec unit tests for loadbalancer recipe
-    ..3. chef exec rspec .\spec\unit\recipes\deploy_spec.rb              //Run ChefSpec unit tests for deploy recipe
+    +. chef exec rspec .\spec\unit\recipes\appserver_spec.rb           //Run ChefSpec unit tests for appserver recipe
+    - chef exec rspec .\spec\unit\recipes\loadbalancer_spec.rb        //Run ChefSpec unit tests for loadbalancer recipe
+    * chef exec rspec .\spec\unit\recipes\deploy_spec.rb              //Run ChefSpec unit tests for deploy recipe
 
 
  3. In order to run integration run following commands
