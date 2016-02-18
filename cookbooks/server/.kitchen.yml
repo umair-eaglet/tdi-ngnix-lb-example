@@ -1,0 +1,42 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+
+platforms:
+  - name: centos-7.1
+
+suites:
+  - name: appserver_1
+    driver:
+     network:
+      - ["private_network", {ip: "192.168.1.2"}]
+    run_list:
+      - recipe[server::appserver]
+      - recipe[server::deploy]
+    attributes:
+
+  - name: appserver_2
+    driver:
+     network:
+      - ["private_network", {ip: "192.168.1.3"}]  
+    run_list:
+      - recipe[server::appserver]
+      - recipe[server::deploy]	  
+    attributes:
+
+  - name: load_balancer
+    driver:
+     network:
+      - ["forwarded_port", {guest: 80, host: 8182}]
+    run_list:
+      - recipe[server::loadbalancer]
+    attributes:  {
+        'loadbalancer' : {
+          'upstream_servers' : ['192.168.1.2:8484','192.168.1.3:8484']
+        }
+      }
+
