@@ -15,18 +15,18 @@ Deploy recipe deals with deployment and running Go App.
 Quick Commands
 ======================
 
- 1- Run "kitchen Converge" in command line while in Server Cookbook directory⋅⋅
-    Once all servers are converged then you can see results on localhost & port 8182 by running http://localhost:8182/⋅⋅
+ 1. Run "kitchen Converge" in command line while in Server Cookbook directory
+    Once all servers are converged then you can see results on localhost & port 8182 by running http://localhost:8182/
 
- Chef recipes are written using Test Driven approach⋅⋅
- 2- In order to run unit test for each recipe, run following command⋅⋅
-    2.1 chef exec rspec .\spec\unit\recipes\appserver_spec.rb           //Run ChefSpec unit tests for appserver recipe
+ Chef recipes are written using Test Driven approach
+ 2. In order to run unit test for each recipe, run following command
+    ..2.1 chef exec rspec .\spec\unit\recipes\appserver_spec.rb           //Run ChefSpec unit tests for appserver recipe
     2.2 chef exec rspec .\spec\unit\recipes\loadbalancer_spec.rb        //Run ChefSpec unit tests for loadbalancer recipe
     2.3 chef exec rspec .\spec\unit\recipes\deploy_spec.rb              //Run ChefSpec unit tests for deploy recipe
 
 
- 3- In order to run integration run following commands
-   3.1  kitchen verify appserver-1-centos-71      //For appserver-1
+ 3. In order to run integration run following commands
+   ..3.1  kitchen verify appserver-1-centos-71      //For appserver-1
    3.2  kitchen verify appserver-2-centos-71      //For appserver-2
    3.3  kitchen verify load-balancer-centos-71    //For load balancer
 
