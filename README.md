@@ -20,19 +20,19 @@ Quick Commands
 
  Chef recipes are written using Test Driven approach
  2. In order to run unit test for each recipe, run following command
-    +. chef exec rspec .\spec\unit\recipes\appserver_spec.rb           //Run ChefSpec unit tests for appserver recipe
+    - chef exec rspec .\spec\unit\recipes\appserver_spec.rb           //Run ChefSpec unit tests for appserver recipe
     - chef exec rspec .\spec\unit\recipes\loadbalancer_spec.rb        //Run ChefSpec unit tests for loadbalancer recipe
-    * chef exec rspec .\spec\unit\recipes\deploy_spec.rb              //Run ChefSpec unit tests for deploy recipe
+    - chef exec rspec .\spec\unit\recipes\deploy_spec.rb              //Run ChefSpec unit tests for deploy recipe
 
 
  3. In order to run integration run following commands
-   ..1.  kitchen verify appserver-1-centos-71      //For appserver-1
-   ..2.  kitchen verify appserver-2-centos-71      //For appserver-2
-   ..3.  kitchen verify load-balancer-centos-71    //For load balancer
+   -  kitchen verify appserver-1-centos-71      //For appserver-1
+   -  kitchen verify appserver-2-centos-71      //For appserver-2
+   -  kitchen verify load-balancer-centos-71    //For load balancer
 
 General Settings
 =============
 Following attributes are set in corresponding attributes files to be used in recipes
-..* default['appserver']['deploy_to'] = '/path/to/deploy/app'
-..* default['appserver']['repo'] = 'https://github.com/your-git-account/your-app-on.git'
-..* default['appserver']['document_root'] = '/path/to/webroot'
+* default['appserver']['deploy_to'] = '/path/to/deploy/app'
+* default['appserver']['repo'] = 'https://github.com/your-git-account/your-app-on.git'
+* default['appserver']['document_root'] = '/path/to/webroot'
