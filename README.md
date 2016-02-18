@@ -5,9 +5,9 @@ This is high level example of chef provisioning using Test Driven Infrastructure
 
 Note: It required Chef DK 12 or higher version installed along with VM Virtual Box and Vagrant installed
 
-Quik Recipes Intro
+Brief Recipes Introduction
 ======================
-A Server Cookbook contains all the recipes required to create the Infrastructure and Deploy application.⋅⋅
+A Server Cookbook contains all the recipes required to create the Infrastructure and Deploy application.
 Appserver recipe contains all the code necessary to run Golang server.⋅⋅
 Loadbalancer recipe installs and configure nginx for load balancing in Round Robin fashion ( Default nginx )⋅⋅
 Deploy recipe deals with deployment and running Go App.
